@@ -2,11 +2,11 @@ const input = document.querySelector('input');
 const btn = document.querySelector('.addTask > button');
 
 btn.addEventListener('click', addList);
-input.addEventListener('keyup', (e)=> {
-    (e.keyCode === 13 ? addList(e) : null);
+input.addEventListener('keyup', (Marina)=> {
+    (Marina.key === 'Enter' ? addList(Marina) : null);
 })
 
-function addList(e) {
+function addList(Kostya) {
     const notCompleted = document.querySelector('.notCompleted');
     const Completed = document.querySelector('.Completed');
 
@@ -26,13 +26,13 @@ function addList(e) {
     }
 
     checkBtn.addEventListener('click', function() {
-        const parent = this.parentNode;
+        const parent = this.parentElement;
         parent.remove();
         Completed.appendChild(parent);
         checkBtn.style.display = 'none';
     });
     delBtn.addEventListener('click', function() {
-        const parent = this.parentNode;
+        const parent = this.parentElement;
         parent.remove();
     });
 
