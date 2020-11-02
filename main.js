@@ -2,11 +2,11 @@ const input = document.querySelector('input');
 const btn = document.querySelector('.addTask > button');
 
 btn.addEventListener('click', addList);
-input.addEventListener('keyup', (Marina)=> {
-    (Marina.key === 'Enter' ? addList(Marina) : null);
+input.addEventListener('keyup', (enter)=> {
+    (enter.key === 'Enter' ? addList(enter) : null);
 })
 
-function addList(Kostya) {
+function addList(listCreation) {
     const notCompleted = document.querySelector('.notCompleted');
     const Completed = document.querySelector('.Completed');
 
